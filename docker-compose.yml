@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  
+  backend:
+    image: aymen065/websocketback
+    networks:
+      - testapp
+    container_name: backend
+    ports:
+       - "8080:8080"
+    
+    restart: on-failure
+  frontend:
+    image: aymen065/websocketfront
+    networks:
+      - testapp
+    container_name: frontend
+    links:
+       - "backend"
+    depends_on:
+       - "backend"
+    ports:
+       - "80:80" 
+
+networks:
+  testapp: 

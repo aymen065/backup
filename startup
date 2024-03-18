@@ -1,0 +1,37 @@
+erp :
+
+terminal 1:
+
+cd ngerp-v2/
+
+export NODE_ENV=iandp && export NODE_OPTIONS=--max_old_space_size=8192
+
+npm run-script add-libraries && npm i &&  npm run-script build && ng s
+
+terminal 2 :
+
+cd ngerp-v2/
+
+ng serve login-app
+
+portal :
+
+terminal 3 :
+
+cd investor-portal/
+
+npm i && npm run-script build && ng s
+
+terlinal 4 :
+
+cd investor-portal/
+
+ng serve login-app
+
+
+
+https://www.youtube.com/watch?v=zO9Ufkv_oIQ
+
+
+
+
